@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>GRAAU — Óculos de Grau, Sol e Lentes | graau.online</title>
+<meta name="description" content="GRAAU — Ótica online premium em graau.online. Óculos de grau, sol e lentes com atendimento 24h pela LUNA, nossa IA consultora especialista.">
+<link rel="canonical" href="https://graau.online/">
+<meta property="og:title" content="GRAAU — Ótica Online Premium | graau.online">
+<meta property="og:description" content="Óculos de grau, sol e lentes com atendimento 24h pela LUNA, nossa IA consultora.">
+<meta property="og:url" content="https://graau.online/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0C1528">
+<!-- 
+==============================================
+  GRAAU — graau.online
+  Desenvolvido com IA — Agente: LUNA
+  WhatsApp LUNA: Trocar "SEUNUMERO" pelo 
+  número real em todas as ocorrências abaixo
+  Buscar por: wa.me/SEUNUMERO
+==============================================
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════
+   TOKENS
+═══════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --n900:#060C18;--n800:#0B1426;--n700:#101D38;--n600:#162548;
+  --n500:#1D3160;--n400:#274480;--n300:#3A5DA0;
+  --g500:#C8A84A;--g400:#D8BE70;--g300:#EAD598;--g600:#A07828;
+  --cream:#F4EFE6;--cream2:#C8C0B0;
+  --gray3:#8894A8;--gray4:#A8B4C8;
+  --teal:#00C4A0;--red:#E04848;--white:#fff;
+  --ff-d:'Cormorant Garamond',serif;--ff-b:'Inter',sans-serif;--ff-m:'Space Mono',monospace;
+  --r:12px;--r2:20px;--sh:0 16px 56px rgba(6,12,24,.75);--sh2:0 4px 20px rgba(6,12,24,.5);
+  --bdr:rgba(200,168,74,.18);--bdrd:rgba(255,255,255,.06);
+  --gg:linear-gradient(135deg,#C8A84A,#EAD598,#C8A84A);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--ff-b);background:var(--n900);color:var(--cream);overflow-x:hidden;line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{cursor:pointer;border:none;font-family:var(--ff-b)}
+::selection{background:var(--g500);color:var(--n900)}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--n800)}
+::-webkit-scrollbar-thumb{background:var(--g600);border-radius:3px}
+
+/* ═══════════════════════════════════
+   UTILS
+═══════════════════════════════════ */
+.ctn{max-width:1300px;margin:0 auto;padding:0 28px}
+.tag{display:inline-flex;align-items:center;gap:7px;font-family:var(--ff-m);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--g500)}
+.tag::before{content:'';width:22px;height:1px;background:var(--g500)}
+.sec-title{font-family:var(--ff-d);font-size:clamp(26px,3.5vw,44px);font-weight:700;line-height:1.12}
+.sec-title em{color:var(--g500);font-style:italic}
+.btn-gold{padding:13px 28px;font-size:13.5px;font-weight:700;background:var(--gg);color:var(--n900);border-radius:8px;border:none;letter-spacing:.02em;transition:all .25s;box-shadow:0 4px 20px rgba(200,168,74,.3)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(200,168,74,.5)}
+.btn-ghost{padding:13px 28px;font-size:13.5px;font-weight:600;background:transparent;color:var(--cream);border:1px solid rgba(255,255,255,.25);border-radius:8px;transition:all .25s}
+.btn-ghost:hover{border-color:rgba(255,255,255,.6);background:rgba(255,255,255,.05)}
+
+/* ═══════════════════════════════════
+   TOPBAR
+═══════════════════════════════════ */
+.topbar{background:var(--n600);border-bottom:1px solid var(--bdr);font-size:11.5px;font-weight:500;letter-spacing:.04em;padding:9px 28px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.tb-center{display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:center}
+.tb-item{display:flex;align-items:center;gap:5px;color:var(--cream2)}
+.tb-item .ic{color:var(--g500)}
+.tb-sep{color:var(--bdr)}
+.tb-right{display:flex;gap:14px}
+.tb-lnk{font-size:11px;color:var(--gray3);transition:color .2s}
+.tb-lnk:hover{color:var(--g500)}
+
+/* ═══════════════════════════════════
+   HEADER
+═══════════════════════════════════ */
+header{position:sticky;top:0;z-index:1000;background:rgba(6,12,24,.96);backdrop-filter:blur(24px) saturate(160%);border-bottom:1px solid var(--bdr);transition:box-shadow .3s}
+header.scrolled{box-shadow:0 4px 32px rgba(6,12,24,.9)}
+.hdr-inner{display:flex;align-items:center;gap:20px;height:74px;max-width:1300px;margin:0 auto;padding:0 28px}
+
+/* Logo */
+.logo{flex-shrink:0;font-family:var(--ff-d);font-size:32px;font-weight:700;color:var(--white);letter-spacing:-.01em;display:flex;align-items:center;gap:8px}
+.logo .g{color:var(--g500)}
+.logo-tag{font-family:var(--ff-m);font-size:9px;background:var(--g500);color:var(--n900);padding:2px 7px;border-radius:3px;letter-spacing:.08em;font-weight:700}
+
+/* Nav */
+.nav{flex:1;display:flex;align-items:center;gap:2px}
+.nl{position:relative;padding:8px 13px;font-size:13.5px;font-weight:500;color:var(--gray4);border-radius:6px;cursor:pointer;transition:all .2s;white-space:nowrap}
+.nl:hover{color:var(--white);background:var(--bdrd)}
+.nl .cv{font-size:9px;margin-left:3px}
+.nl-outlet{color:var(--g500);border:1px solid rgba(200,168,74,.3);background:rgba(200,168,74,.05)}
+.nl-outlet:hover{background:rgba(200,168,74,.12)}
+
+/* Dropdown */
+.has-dd{position:relative}
+.dd{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(-6px);background:var(--n800);border:1px solid var(--bdr);border-radius:var(--r);padding:16px;min-width:220px;box-shadow:var(--sh);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s,transform .2s;z-index:100}
+.has-dd:hover .dd{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+.dd-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px}
+.dd a{display:block;padding:9px 12px;font-size:13px;color:var(--gray4);border-radius:6px;transition:all .15s}
+.dd a:hover{background:rgba(200,168,74,.08);color:var(--g500)}
+.dd-div{grid-column:1/-1;height:1px;background:var(--bdrd);margin:4px 0}
+
+/* Search */
+.srch{position:relative;flex:1;max-width:320px}
+.srch input{width:100%;height:42px;padding:0 16px 0 40px;background:var(--n700);border:1px solid var(--bdrd);border-radius:8px;color:var(--cream);font-size:13.5px;font-family:var(--ff-b);outline:none;transition:border-color .2s}
+.srch input::placeholder{color:var(--gray3)}
+.srch input:focus{border-color:var(--g500)}
+.srch-ic{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--gray3);font-size:14px;pointer-events:none}
+
+/* Actions */
+.hdr-acts{display:flex;align-items:center;gap:6px}
+.hbtn{position:relative;width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:var(--n700);border:1px solid var(--bdrd);border-radius:8px;color:var(--gray4);font-size:17px;transition:all .2s}
+.hbtn:hover{border-color:var(--g500);color:var(--g500)}
+.hbadge{position:absolute;top:-5px;right:-5px;width:17px;height:17px;border-radius:50%;background:var(--g500);color:var(--n900);font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;border:2px solid var(--n900)}
+.hlogin{padding:9px 18px;font-size:13px;font-weight:600;background:transparent;border:1px solid var(--bdr);border-radius:8px;color:var(--cream2);transition:all .2s}
+.hlogin:hover{border-color:var(--g500);color:var(--g500)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:8px}
+.burger span{display:block;width:22px;height:2px;background:var(--cream);border-radius:2px;transition:all .3s}
+
+/* ═══════════════════════════════════
+   DRAWER MOBILE
+═══════════════════════════════════ */
+.drawer{position:fixed;inset:0;z-index:2000;display:flex;pointer-events:none}
+.drw-bd{position:absolute;inset:0;background:rgba(6,12,24,.75);backdrop-filter:blur(4px);opacity:0;transition:opacity .3s}
+.drw-panel{position:relative;width:min(320px,90vw);height:100%;background:var(--n800);border-right:1px solid var(--bdr);transform:translateX(-100%);transition:transform .3s;display:flex;flex-direction:column;overflow-y:auto;padding:22px 18px}
+.drawer.open{pointer-events:auto}
+.drawer.open .drw-bd{opacity:1}
+.drawer.open .drw-panel{transform:translateX(0)}
+.drw-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px}
+.drw-close{width:36px;height:36px;border-radius:8px;background:var(--n700);border:1px solid var(--bdrd);color:var(--cream);font-size:18px;display:flex;align-items:center;justify-content:center}
+.drw-nav{display:flex;flex-direction:column;gap:5px}
+.drw-item{display:flex;align-items:center;justify-content:space-between;padding:13px 15px;background:var(--n700);border:1px solid var(--bdrd);border-radius:10px;font-size:14px;font-weight:500;color:var(--cream2);cursor:pointer;transition:all .2s}
+.drw-item:hover{border-color:var(--bdr);color:var(--g500)}
+.drw-item.gld{color:var(--g500);border-color:rgba(200,168,74,.25)}
+.drw-sub{padding:5px 6px 5px 18px;display:none;flex-direction:column;gap:1px}
+.drw-sub.open{display:flex}
+.drw-sub a{padding:9px 13px;font-size:13.5px;color:var(--gray3);border-radius:7px;display:block;transition:all .2s}
+.drw-sub a:hover{color:var(--g500);background:rgba(200,168,74,.05)}
+
+/* ═══════════════════════════════════
+   HERO
+═══════════════════════════════════ */
+.hero{position:relative;height:620px;overflow:hidden}
+.slide{position:absolute;inset:0;display:flex;align-items:center;opacity:0;transition:opacity .9s ease}
+.slide.active{opacity:1}
+.slide-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.06);transition:transform 9s ease}
+.slide.active .slide-bg{transform:scale(1)}
+.slide:nth-child(1) .slide-bg{background:radial-gradient(ellipse at 65% 45%,#1A2E5A 0%,#060C18 65%)}
+.slide:nth-child(2) .slide-bg{background:radial-gradient(ellipse at 35% 50%,#18280A 0%,#060C18 65%)}
+.slide:nth-child(3) .slide-bg{background:radial-gradient(ellipse at 55% 35%,#28100A 0%,#060C18 65%)}
+.slide-ov{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,12,24,.92) 0%,rgba(6,12,24,.5) 55%,rgba(6,12,24,.12) 100%)}
+.slide-ct{position:relative;z-index:2;width:100%;max-width:1300px;margin:0 auto;padding:0 56px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--ff-m);font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--g500);border:1px solid rgba(200,168,74,.35);padding:5px 14px;border-radius:4px;margin-bottom:22px}
+.slide-title{font-family:var(--ff-d);font-size:clamp(38px,5.5vw,72px);font-weight:700;line-height:1.04;margin-bottom:18px;max-width:560px}
+.slide-title em{color:var(--g500);font-style:italic}
+.slide-desc{font-size:15.5px;color:var(--cream2);line-height:1.75;max-width:440px;margin-bottom:36px}
+.slide-ctas{display:flex;gap:12px;flex-wrap:wrap}
+
+/* Slider controls */
+.s-arr{position:absolute;top:50%;transform:translateY(-50%);z-index:10;width:46px;height:46px;border-radius:50%;background:rgba(6,12,24,.7);border:1px solid var(--bdr);color:var(--cream);font-size:18px;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(8px);transition:all .2s}
+.s-arr:hover{background:var(--g500);border-color:var(--g500);color:var(--n900)}
+.s-arr.prev{left:24px}
+.s-arr.next{right:24px}
+.s-dots{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10}
+.s-dot{width:6px;height:6px;border-radius:3px;background:rgba(255,255,255,.25);border:none;cursor:pointer;transition:all .35s}
+.s-dot.active{width:28px;background:var(--g500)}
+
+/* Hero stats */
+.hero-stats{position:absolute;bottom:40px;right:56px;display:flex;gap:14px;z-index:10}
+.hstat{background:rgba(11,20,38,.88);border:1px solid var(--bdr);border-radius:10px;padding:12px 18px;backdrop-filter:blur(12px);text-align:center}
+.hstat-n{display:block;font-family:var(--ff-d);font-size:22px;font-weight:700;color:var(--g500)}
+.hstat-l{font-size:11px;color:var(--gray3);margin-top:2px}
+
+/* ═══════════════════════════════════
+   TRUST STRIP
+═══════════════════════════════════ */
+.trust{background:var(--n700);border-bottom:1px solid var(--bdr)}
+.trust-inner{max-width:1300px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:repeat(4,1fr)}
+.ti{display:flex;align-items:center;gap:14px;padding:22px 18px;border-right:1px solid var(--bdrd)}
+.ti:last-child{border-right:none}
+.ti-ico{width:44px;height:44px;flex-shrink:0;background:rgba(200,168,74,.1);border:1px solid rgba(200,168,74,.2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.ti-txt strong{display:block;font-size:13px;font-weight:600;color:var(--cream)}
+.ti-txt span{font-size:12px;color:var(--gray3)}
+
+/* ═══════════════════════════════════
+   PRODUCTS
+═══════════════════════════════════ */
+.section{padding:80px 0}
+.sec-hd{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:38px;gap:20px;flex-wrap:wrap}
+.view-all{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--g500);white-space:nowrap;transition:gap .2s}
+.view-all:hover{gap:11px}
+
+.pills{display:flex;gap:8px;margin-bottom:36px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.pills::-webkit-scrollbar{display:none}
+.pill{padding:8px 20px;border-radius:999px;border:1px solid var(--bdrd);background:transparent;color:var(--gray3);font-size:13px;font-weight:500;white-space:nowrap;transition:all .2s;cursor:pointer}
+.pill.active,.pill:hover{background:rgba(200,168,74,.1);border-color:var(--g500);color:var(--g500)}
+
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pcard{background:linear-gradient(160deg,#0F1B30 0%,#0B1426 100%);border:1px solid var(--bdrd);border-radius:var(--r);overflow:hidden;cursor:pointer;transition:all .35s;position:relative}
+.pcard:hover{border-color:var(--bdr);transform:translateY(-5px);box-shadow:0 0 40px rgba(200,168,74,.14),var(--sh2)}
+.pthumb{aspect-ratio:4/3;background:var(--n700);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.pthumb-glow{position:absolute;inset:0;background:radial-gradient(circle at 60% 40%,rgba(200,168,74,.06) 0%,transparent 70%)}
+.pemoji{font-size:68px;transition:transform .4s;z-index:1;position:relative}
+.pcard:hover .pemoji{transform:scale(1.12) rotate(-6deg)}
+.pbadge{position:absolute;top:12px;left:12px;padding:4px 10px;border-radius:4px;font-size:10.5px;font-weight:700;letter-spacing:.04em;z-index:2}
+.b-new{background:var(--teal);color:#fff}
+.b-hot{background:var(--g500);color:var(--n900)}
+.b-off{background:var(--red);color:#fff}
+.pwish{position:absolute;top:12px;right:12px;z-index:2;width:34px;height:34px;border-radius:50%;background:rgba(6,12,24,.8);border:1px solid var(--bdrd);color:var(--gray3);font-size:15px;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;cursor:pointer}
+.pcard:hover .pwish{opacity:1}
+.pbody{padding:15px 17px 17px}
+.pbrand{font-family:var(--ff-m);font-size:9.5px;font-weight:700;letter-spacing:.18em;color:var(--g500);text-transform:uppercase;margin-bottom:5px}
+.pname{font-size:13.5px;font-weight:500;color:var(--cream);line-height:1.4;margin-bottom:12px}
+.pcolors{display:flex;gap:6px;margin-bottom:14px}
+.cs{width:14px;height:14px;border-radius:50%;border:2px solid transparent;cursor:pointer;transition:border-color .2s}
+.cs:hover{border-color:var(--g500)}
+.pfoot{display:flex;align-items:center;justify-content:space-between}
+.pold{font-size:11px;color:var(--gray3);text-decoration:line-through;display:block}
+.pprice{font-size:18px;font-weight:700;color:var(--cream)}
+.pprice small{font-size:12px;color:var(--gray3);font-weight:400}
+.addbtn{width:38px;height:38px;border-radius:8px;background:rgba(200,168,74,.1);border:1px solid rgba(200,168,74,.25);color:var(--g500);font-size:18px;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.addbtn:hover{background:var(--g500);color:var(--n900);border-color:var(--g500)}
+
+/* ═══════════════════════════════════
+   COUNTDOWN
+═══════════════════════════════════ */
+.cd-wrap{background:linear-gradient(160deg,var(--n600) 0%,var(--n800) 100%);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);padding:72px 0;position:relative;overflow:hidden}
+.cd-wrap::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(200,168,74,.07) 0%,transparent 70%);pointer-events:none}
+.cd-inner{max-width:1300px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.cd-timer{display:flex;align-items:center;gap:10px;margin:26px 0}
+.cd-blk{background:rgba(6,12,24,.7);border:1px solid var(--bdr);border-radius:10px;padding:16px 20px;text-align:center;min-width:76px}
+.cd-num{display:block;font-family:var(--ff-d);font-size:36px;font-weight:700;color:var(--g500);line-height:1}
+.cd-lbl{font-size:10px;color:var(--gray3);text-transform:uppercase;letter-spacing:.12em;margin-top:4px;display:block}
+.cd-sep{font-family:var(--ff-d);font-size:30px;color:var(--g500);font-weight:700;align-self:flex-start;margin-top:14px}
+.cd-offers{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cd-card{background:rgba(6,12,24,.6);border:1px solid var(--bdrd);border-radius:10px;padding:15px;display:flex;align-items:center;gap:13px;transition:border-color .2s}
+.cd-card:hover{border-color:var(--bdr)}
+.cd-em{font-size:32px}
+.cd-br{font-family:var(--ff-m);font-size:9px;color:var(--g500);letter-spacing:.15em}
+.cd-nm{font-size:13px;font-weight:500;color:var(--cream);margin:3px 0}
+.cd-pr{font-size:15px;font-weight:700;color:var(--cream)}
+.cd-pr-old{font-size:11px;color:var(--gray3);text-decoration:line-through}
+.cd-pct{background:var(--red);color:#fff;font-size:10px;font-weight:700;padding:2px 6px;border-radius:3px;margin-left:4px}
+
+/* ═══════════════════════════════════
+   BRANDS
+═══════════════════════════════════ */
+.brands{background:var(--n800);border-top:1px solid var(--bdrd);border-bottom:1px solid var(--bdrd);padding:32px 0;overflow:hidden}
+.brands-track{display:flex;gap:52px;animation:marquee 28s linear infinite;width:max-content}
+.brands-track:hover{animation-play-state:paused}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.bname{font-family:var(--ff-d);font-size:19px;font-weight:600;color:var(--n500);letter-spacing:.04em;white-space:nowrap;cursor:pointer;transition:color .3s;padding:6px 0}
+.bname:hover{color:var(--g500)}
+.bdot{color:var(--g600);font-size:10px;align-self:center}
+
+/* ═══════════════════════════════════
+   TIKTOK SECTION
+═══════════════════════════════════ */
+.tiktok-sec{background:linear-gradient(160deg,#010101 0%,#0A0512 50%,#010101 100%);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:80px 0;overflow:hidden;position:relative}
+.tiktok-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(105,201,208,.05) 0%,transparent 55%),radial-gradient(ellipse at 50% 100%,rgba(238,29,82,.05) 0%,transparent 55%);pointer-events:none}
+
+.tt-hd{text-align:center;margin-bottom:52px;position:relative;z-index:1}
+.tt-logo-row{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:16px}
+.tt-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,#161616,#200A28);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:28px}
+.tt-title{font-family:var(--ff-d);font-size:clamp(28px,4vw,50px);font-weight:700;color:var(--white);line-height:1.1}
+.tt-grad{background:linear-gradient(90deg,#69C9D0,#EE1D52);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.tt-sub{font-size:15px;color:var(--gray3);margin-top:10px}
+.tt-handle{display:inline-flex;align-items:center;gap:7px;margin-top:14px;padding:9px 20px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:999px;font-size:13px;color:var(--gray4);transition:all .2s;cursor:pointer}
+.tt-handle:hover{border-color:rgba(105,201,208,.4);color:#69C9D0}
+
+/* Video grid */
+.tt-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;position:relative;z-index:1}
+.tt-card{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:9/16;background:var(--n800);border:1px solid rgba(255,255,255,.06);cursor:pointer;transition:all .3s}
+.tt-card:hover{transform:scale(1.03);border-color:rgba(105,201,208,.3);box-shadow:0 12px 40px rgba(0,0,0,.6)}
+.tt-bg{position:absolute;inset:0}
+.tt-card:nth-child(1) .tt-bg{background:linear-gradient(160deg,#0A1530,#1A2840)}
+.tt-card:nth-child(2) .tt-bg{background:linear-gradient(160deg,#180A1A,#2A1432)}
+.tt-card:nth-child(3) .tt-bg{background:linear-gradient(160deg,#0A1C0A,#142816)}
+.tt-card:nth-child(4) .tt-bg{background:linear-gradient(160deg,#1C1008,#2C1A0A)}
+.tt-card:nth-child(5) .tt-bg{background:linear-gradient(160deg,#0A0A1C,#141430)}
+.tt-shimmer{position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.88) 100%)}
+.tt-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);font-size:52px;opacity:.22;pointer-events:none}
+.tt-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.14);backdrop-filter:blur(8px);border:1.5px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center;font-size:18px;color:#fff;opacity:0;transition:opacity .25s}
+.tt-card:hover .tt-play{opacity:1}
+.tt-meta{position:absolute;bottom:0;left:0;right:0;padding:13px 12px 15px}
+.tt-cap{font-size:12.5px;font-weight:500;color:#fff;line-height:1.4;margin-bottom:8px}
+.tt-stats{display:flex;gap:12px}
+.tt-stat{font-size:11px;color:rgba(255,255,255,.6)}
+.tt-badge{position:absolute;top:12px;right:12px;background:linear-gradient(135deg,#EE1D52,#69C9D0);color:#fff;font-size:9.5px;font-weight:700;padding:3px 8px;border-radius:4px;letter-spacing:.05em}
+.tt-feat{position:absolute;top:12px;left:12px;background:var(--g500);color:var(--n900);font-size:9.5px;font-weight:700;padding:3px 8px;border-radius:4px}
+
+/* TikTok metrics bar */
+.tt-metrics{display:flex;align-items:center;justify-content:center;gap:40px;margin-top:48px;padding:24px 0;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);position:relative;z-index:1;flex-wrap:wrap;gap:30px}
+.tt-metric{text-align:center}
+.tt-metric .val{display:block;font-family:var(--ff-d);font-size:28px;font-weight:700;color:var(--white)}
+.tt-metric .lbl{font-size:11px;color:var(--gray3);margin-top:2px}
+
+.tt-cta{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:36px;flex-wrap:wrap;position:relative;z-index:1}
+.btn-tiktok{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:8px;font-size:14px;font-weight:700;background:linear-gradient(135deg,#EE1D52,#69C9D0);color:#fff;border:none;transition:all .25s;box-shadow:0 4px 20px rgba(238,29,82,.3)}
+.btn-tiktok:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(238,29,82,.5)}
+.tt-follow-info{font-family:var(--ff-m);font-size:11px;color:var(--gray3);display:flex;align-items:center;gap:6px}
+.tt-follow-info span{color:var(--white);font-weight:700}
+
+/* ═══════════════════════════════════
+   LUNA SECTION
+═══════════════════════════════════ */
+.luna-sec{background:linear-gradient(160deg,var(--n800) 0%,var(--n900) 100%);border-top:1px solid var(--bdr);padding:88px 0;position:relative}
+.luna-sec::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--g600),transparent)}
+.luna-inner{max-width:1300px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.luna-chat{background:var(--n700);border:1px solid var(--bdr);border-radius:var(--r2);overflow:hidden;box-shadow:var(--sh)}
+.chat-top{background:var(--n600);border-bottom:1px solid var(--bdr);padding:14px 18px;display:flex;align-items:center;gap:12px}
+.chat-av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#3D5FA0,var(--n400));border:2px solid var(--g500);display:flex;align-items:center;justify-content:center;font-size:18px}
+.chat-info .nm{font-size:14px;font-weight:600;color:var(--cream)}
+.chat-info .st{font-size:11.5px;color:var(--teal);display:flex;align-items:center;gap:5px}
+.online-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);animation:blink 2s ease infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.chat-menu{margin-left:auto;color:var(--gray3);font-size:18px;cursor:pointer}
+.chat-body{padding:20px 16px;display:flex;flex-direction:column;gap:14px}
+.msg-row{display:flex;align-items:flex-start;gap:8px}
+.msg-row.user{flex-direction:row-reverse}
+.mavt{width:30px;height:30px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:14px}
+.mavt.luna{background:linear-gradient(135deg,#3D5FA0,var(--n400));border:1.5px solid var(--g600)}
+.mavt.user{background:var(--n600);border:1px solid var(--bdrd)}
+.bbl{max-width:240px;padding:10px 14px;font-size:13.5px;line-height:1.5;border-radius:14px}
+.bbl.luna{background:rgba(26,45,90,.8);border:1px solid var(--bdr);color:var(--cream2);border-radius:14px 14px 14px 4px}
+.bbl.user{background:rgba(200,168,74,.1);border:1px solid rgba(200,168,74,.2);color:var(--cream2);border-radius:14px 14px 4px 14px}
+.msg-ts{font-size:10px;color:var(--gray3);margin-top:3px}
+.typing-row{display:flex;align-items:center;gap:8px}
+.typing-bbl{padding:10px 16px;background:rgba(26,45,90,.8);border:1px solid var(--bdr);border-radius:14px 14px 14px 4px;display:flex;gap:4px}
+.typing-bbl span{width:6px;height:6px;background:var(--n300);border-radius:50%;animation:typeit 1.3s ease infinite}
+.typing-bbl span:nth-child(2){animation-delay:.2s}
+.typing-bbl span:nth-child(3){animation-delay:.4s}
+@keyframes typeit{0%,100%{opacity:.3;transform:scale(.85)}50%{opacity:1;transform:scale(1.1)}}
+.luna-txt h2{font-family:var(--ff-d);font-size:clamp(28px,3.5vw,46px);font-weight:700;line-height:1.15;margin-bottom:16px}
+.luna-txt h2 em{color:var(--g500);font-style:italic}
+.luna-txt p{font-size:15.5px;color:var(--cream2);line-height:1.8;margin-bottom:28px}
+.luna-feats{display:flex;flex-direction:column;gap:12px;margin-bottom:36px}
+.luna-feat{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--cream2)}
+.feat-ic{width:34px;height:34px;border-radius:8px;flex-shrink:0;background:rgba(200,168,74,.1);border:1px solid rgba(200,168,74,.2);display:flex;align-items:center;justify-content:center;font-size:16px}
+.btn-luna{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:8px;font-size:14px;font-weight:700;background:linear-gradient(135deg,var(--n400),var(--n300));border:1px solid var(--g600);color:var(--cream);transition:all .25s;box-shadow:0 4px 20px rgba(40,64,128,.4)}
+.btn-luna:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(40,64,128,.6);border-color:var(--g400)}
+
+/* ═══════════════════════════════════
+   NEWSLETTER
+═══════════════════════════════════ */
+.nl-wrap{background:var(--n700);border-top:1px solid var(--bdr);padding:72px 0}
+.nl-inner{max-width:540px;margin:0 auto;padding:0 28px;text-align:center}
+.nl-inner h2{font-family:var(--ff-d);font-size:clamp(22px,3vw,36px);font-weight:700;margin-bottom:12px}
+.nl-inner h2 em{color:var(--g500);font-style:italic}
+.nl-inner p{color:var(--gray3);font-size:15px;margin-bottom:28px}
+.nl-form{display:flex;gap:8px;max-width:460px;margin:0 auto}
+.nl-form input{flex:1;height:46px;padding:0 18px;background:var(--n800);border:1px solid var(--bdrd);border-radius:8px;color:var(--cream);font-size:14px;font-family:var(--ff-b);outline:none;transition:border-color .2s}
+.nl-form input:focus{border-color:var(--g500)}
+.nl-form input::placeholder{color:var(--gray3)}
+.nl-tags{display:flex;justify-content:center;gap:16px;margin-top:14px;flex-wrap:wrap}
+.nl-tag{font-size:12px;color:var(--gray3);display:flex;align-items:center;gap:4px}
+.nl-tag::before{content:'✓';color:var(--teal);font-weight:700}
+
+/* ═══════════════════════════════════
+   FOOTER
+═══════════════════════════════════ */
+footer{background:var(--n900);border-top:1px solid var(--bdr);padding:64px 0 0}
+.footer-grid{max-width:1300px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:2.2fr 1fr 1fr 1.2fr;gap:52px;padding-bottom:52px}
+.fb .logo-txt{font-family:var(--ff-d);font-size:26px;font-weight:700;color:var(--white);display:block;margin-bottom:16px}
+.fb .logo-txt .g{color:var(--g500)}
+.fb p{font-size:14px;color:var(--gray3);line-height:1.75;margin-bottom:24px;max-width:290px}
+.socials{display:flex;gap:8px}
+.soc{width:38px;height:38px;border-radius:8px;background:var(--n700);border:1px solid var(--bdrd);color:var(--gray3);font-size:15px;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.soc:hover{border-color:var(--bdr);color:var(--g500)}
+.fc h4{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--cream);margin-bottom:20px}
+.fc ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.fc ul li a{font-size:13.5px;color:var(--gray3);transition:color .2s}
+.fc ul li a:hover{color:var(--g500)}
+.fc-contact{display:flex;flex-direction:column;gap:12px}
+.fc-item{display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:var(--gray3)}
+.fc-item .ico{font-size:16px;flex-shrink:0;margin-top:1px}
+.fc-item a:hover{color:var(--g500)}
+.footer-bot{border-top:1px solid var(--bdrd);padding:20px 28px;max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-bot p{font-size:12px;color:var(--gray3)}
+.pay-methods{display:flex;gap:6px}
+.pay-chip{padding:5px 10px;background:var(--n700);border:1px solid var(--bdrd);border-radius:4px;font-family:var(--ff-m);font-size:9.5px;color:var(--gray3)}
+
+/* ═══════════════════════════════════
+   WHATSAPP FLOAT
+═══════════════════════════════════ */
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.wa-card{background:var(--n700);border:1px solid var(--bdr);border-radius:14px;padding:14px 18px;max-width:230px;box-shadow:var(--sh);display:none}
+.wa-card.show{display:block;animation:slideup .3s ease}
+@keyframes slideup{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.wa-card strong{display:block;color:var(--teal);font-size:13px;margin-bottom:4px}
+.wa-card p{font-size:12.5px;color:var(--gray4);line-height:1.4}
+.wa-btn{width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;font-size:28px;cursor:pointer;position:relative;box-shadow:0 4px 24px rgba(37,211,102,.45);transition:transform .2s}
+.wa-btn:hover{transform:scale(1.08)}
+.wa-ring{position:absolute;inset:-5px;border-radius:50%;border:2px solid #25D366;animation:ring 2.2s ease infinite}
+@keyframes ring{0%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.6)}}
+.wa-dot{position:absolute;top:-3px;right:-3px;width:20px;height:20px;border-radius:50%;background:var(--g500);color:var(--n900);font-size:10px;font-weight:700;border:2px solid var(--n900);display:flex;align-items:center;justify-content:center}
+
+/* ═══════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════ */
+@media(max-width:1100px){
+  .pgrid{grid-template-columns:repeat(3,1fr)}
+  .tt-grid{grid-template-columns:repeat(4,1fr)}
+  .tt-card:last-child{display:none}
+  .nav,.srch,.hlogin{display:none}
+  .burger{display:flex}
+}
+@media(max-width:860px){
+  .hero{height:520px}
+  .hero-stats{display:none}
+  .slide-ct{padding:0 28px}
+  .trust-inner{grid-template-columns:repeat(2,1fr)}
+  .ti:nth-child(2){border-right:none}
+  .ti:nth-child(3){border-right:1px solid var(--bdrd)}
+  .ti{border-bottom:1px solid var(--bdrd)}
+  .ti:nth-child(3),.ti:nth-child(4){border-bottom:none}
+  .cd-inner{grid-template-columns:1fr;gap:36px}
+  .luna-inner{grid-template-columns:1fr;gap:40px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:36px}
+  .tt-grid{grid-template-columns:repeat(3,1fr)}
+  .tt-card:nth-child(4),.tt-card:nth-child(5){display:none}
+  .tt-metrics{gap:24px}
+}
+@media(max-width:600px){
+  .topbar{justify-content:center}
+  .tb-right{display:none}
+  .pgrid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .trust-inner{grid-template-columns:1fr}
+  .ti{border-right:none !important;border-bottom:1px solid var(--bdrd) !important}
+  .ti:last-child{border-bottom:none !important}
+  .tt-grid{grid-template-columns:repeat(2,1fr);padding:0 16px}
+  .tt-card:nth-child(3),.tt-card:nth-child(4),.tt-card:nth-child(5){display:none}
+  .footer-grid{grid-template-columns:1fr;gap:28px}
+  .hero{height:440px}
+  .slide-title{font-size:34px}
+  .cd-offers{grid-template-columns:1fr}
+  .nl-form{flex-direction:column}
+  .hdr-inner{padding:0 16px}
+  .s-arr.prev{left:10px}
+  .s-arr.next{right:10px}
+  .tt-metrics{flex-direction:column;gap:16px}
+}
+</style>
+</head>
+<body>
+
+
+<!-- ═══ LUNA ANNOUNCEMENT BAR ═══ -->
+<div style="background:linear-gradient(90deg,#0C1528,#1D3160,#0C1528);border-bottom:1px solid rgba(200,168,74,.3);padding:10px 28px;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;text-align:center;">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <span style="font-size:20px">💜</span>
+    <span style="font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;color:#F4EFE6;">
+      LUNA — <em style="color:#C8A84A;font-style:italic;">Sua consultora de IA</em> está online agora
+    </span>
+    <span style="font-size:20px">💜</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:6px;background:rgba(200,168,74,.12);border:1px solid rgba(200,168,74,.3);border-radius:999px;padding:5px 14px;">
+    <span style="width:7px;height:7px;border-radius:50%;background:#00C4A0;display:inline-block;animation:blink 2s ease infinite;"></span>
+    <span style="font-size:12px;color:#00C4A0;font-weight:600;letter-spacing:.04em;">Responde em segundos · 24h por dia · 7 dias por semana</span>
+  </div>
+</div>
+<!-- TOPBAR -->
+<div class="topbar">
+  <div></div>
+  <div class="tb-center">
+    <div class="tb-item"><span class="ic">✦</span>PARCELE EM ATÉ 10× SEM JUROS</div>
+    <span class="tb-sep">|</span>
+    <div class="tb-item"><span class="ic">💰</span>5% OFF NO PIX</div>
+    <span class="tb-sep">|</span>
+    <div class="tb-item"><span class="ic">🚚</span>FRETE GRÁTIS acima de R$999</div>
+  </div>
+  <div class="tb-right">
+    <a href="#" class="tb-lnk">Lojas físicas</a>
+    <a href="#" class="tb-lnk">Rastrear pedido</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header id="hdr">
+  <div class="hdr-inner">
+    <a href="/" class="logo" aria-label="GRAAU">
+      GR<span class="g">AA</span>U
+      <span class="logo-tag">ÓTICA</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <div class="nl has-dd">Óculos de Grau <span class="cv">▾</span>
+        <div class="dd"><div class="dd-grid">
+          <a href="#">👔 Masculino</a><a href="#">👗 Feminino</a>
+          <a href="#">🧒 Infantil</a><a href="#">🏷️ Outlet</a>
+          <div class="dd-div"></div>
+          <a href="#">✨ Novidades</a><a href="#">⭐ Mais Vendidos</a>
+        </div></div>
+      </div>
+      <div class="nl has-dd">Óculos de Sol <span class="cv">▾</span>
+        <div class="dd"><div class="dd-grid">
+          <a href="#">👔 Masculino</a><a href="#">👗 Feminino</a>
+          <a href="#">🧒 Infantil</a><a href="#">🏖️ Praia</a>
+        </div></div>
+      </div>
+      <a class="nl" href="#">Lente de Contato</a>
+      <div class="nl has-dd">Marcas <span class="cv">▾</span>
+        <div class="dd" style="min-width:240px"><div class="dd-grid">
+          <a href="#">Ray-Ban</a><a href="#">Oakley</a>
+          <a href="#">Prada</a><a href="#">Vogue</a>
+          <a href="#">Varilux</a><a href="#">Transitions</a>
+          <a href="#">Acuvue</a><a href="#" style="color:var(--g500)">Ver todas →</a>
+        </div></div>
+      </div>
+      <a class="nl nl-outlet" href="#">🔥 OUTLET</a>
+    </nav>
+    <div class="srch" role="search">
+      <span class="srch-ic">🔍</span>
+      <input type="search" placeholder="Buscar óculos, marcas, lentes…" aria-label="Buscar">
+    </div>
+    <div class="hdr-acts">
+      <button class="hlogin">Entrar</button>
+      <a href="#" class="hbtn" aria-label="Favoritos">♡</a>
+      <a href="#" class="hbtn" aria-label="Carrinho" id="cartBtn">🛒<span class="hbadge" id="cartN">0</span></a>
+      <button class="burger" id="burgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- DRAWER -->
+<div class="drawer" id="drawer" role="dialog" aria-label="Menu">
+  <div class="drw-bd" id="drwBd"></div>
+  <div class="drw-panel">
+    <div class="drw-hd">
+      <span style="font-family:var(--ff-d);font-size:24px;font-weight:700">GR<span class="g">AA</span>U</span>
+      <button class="drw-close" id="drwClose">✕</button>
+    </div>
+    <nav class="drw-nav">
+      <div class="drw-item" onclick="toggleSub(this)">👓 Óculos de Grau <span>›</span>
+        <div class="drw-sub"><a href="#">Masculino</a><a href="#">Feminino</a><a href="#">Infantil</a></div>
+      </div>
+      <div class="drw-item" onclick="toggleSub(this)">☀️ Óculos de Sol <span>›</span>
+        <div class="drw-sub"><a href="#">Masculino</a><a href="#">Feminino</a><a href="#">Infantil</a></div>
+      </div>
+      <div class="drw-item">💎 Lente de Contato</div>
+      <div class="drw-item" onclick="toggleSub(this)">🏷️ Marcas <span>›</span>
+        <div class="drw-sub"><a href="#">Ray-Ban</a><a href="#">Oakley</a><a href="#">Prada</a><a href="#">Varilux</a></div>
+      </div>
+      <div class="drw-item gld">🔥 OUTLET</div>
+      <div class="drw-item" style="margin-top:8px;background:rgba(37,211,102,.08);border-color:rgba(37,211,102,.25);color:#25D366">💬 Falar com LUNA</div>
+    </nav>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" aria-label="Destaques">
+  <div class="slide active">
+    <div class="slide-bg"></div><div class="slide-ov"></div>
+    <div class="slide-ct">
+      <div class="eyebrow">✦ Nova Coleção 2025</div>
+      <h1 class="slide-title">Óculos que revelam<br><em>o melhor de você</em></h1>
+      <p class="slide-desc">Armações premium com medição de DNP online e lentes multifocais de precisão. Entrega em todo o Brasil.</p>
+      <div class="slide-ctas"><button class="btn-gold">Ver Coleção →</button><button class="btn-ghost">Falar com LUNA 💜</button></div>
+    </div>
+  </div>
+  <div class="slide">
+    <div class="slide-bg"></div><div class="slide-ov"></div>
+    <div class="slide-ct">
+      <div class="eyebrow" style="color:var(--teal);border-color:rgba(0,196,160,.4)">💰 Oferta do Mês</div>
+      <h1 class="slide-title">Lentes multifocais<br><em style="color:var(--teal)">até 40% mais baratas</em></h1>
+      <p class="slide-desc">Varilux, Zeiss e Kodak com garantia de adaptação de 90 dias. Parcelamento em 10× sem juros.</p>
+      <div class="slide-ctas"><button class="btn-gold" style="background:linear-gradient(135deg,#00C4A0,#009980)">Ver Ofertas →</button><button class="btn-ghost">Saiba mais</button></div>
+    </div>
+  </div>
+  <div class="slide">
+    <div class="slide-bg"></div><div class="slide-ov"></div>
+    <div class="slide-ct">
+      <div class="eyebrow" style="color:var(--red);border-color:rgba(224,72,72,.4)">🔥 Outlet</div>
+      <h1 class="slide-title">Ray-Ban, Oakley,<br><em style="color:#E8A870">até 50% off</em></h1>
+      <p class="slide-desc">Óculos originais com descontos reais. Estoque limitado — aproveite antes que acabe!</p>
+      <div class="slide-ctas"><button class="btn-gold" style="background:linear-gradient(135deg,var(--red),#C03030)">Ver Outlet →</button><button class="btn-ghost">Todas as marcas</button></div>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hstat"><span class="hstat-n">+18k</span><span class="hstat-l">Clientes felizes</span></div>
+    <div class="hstat"><span class="hstat-n">4.9★</span><span class="hstat-l">Avaliação média</span></div>
+    <div class="hstat"><span class="hstat-n">24h</span><span class="hstat-l">LUNA disponível</span></div>
+  </div>
+  <button class="s-arr prev" id="prev" aria-label="Anterior">‹</button>
+  <button class="s-arr next" id="next" aria-label="Próximo">›</button>
+  <div class="s-dots">
+    <button class="s-dot active" onclick="goTo(0)"></button>
+    <button class="s-dot" onclick="goTo(1)"></button>
+    <button class="s-dot" onclick="goTo(2)"></button>
+  </div>
+</section>
+
+<!-- TRUST -->
+<div class="trust">
+  <div class="trust-inner">
+    <div class="ti"><div class="ti-ico">🚚</div><div class="ti-txt"><strong>Frete Grátis</strong><span>Sul, Sudeste e BA acima de R$999</span></div></div>
+    <div class="ti"><div class="ti-ico">🔄</div><div class="ti-txt"><strong>Troca Garantida</strong><span>30 dias sem burocracia</span></div></div>
+    <div class="ti"><div class="ti-ico">🔒</div><div class="ti-txt"><strong>Pagamento Seguro</strong><span>PIX com 5% OFF · 10× sem juros</span></div></div>
+    <div class="ti"><div class="ti-ico">👓</div><div class="ti-txt"><strong>Armação + Lente</strong><span>Completo, rápido e com garantia</span></div></div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="section">
+  <div class="ctn">
+    <div class="sec-hd">
+      <div><div class="tag" style="margin-bottom:10px">Os mais desejados</div><h2 class="sec-title">Os <em>Queridinhos</em> do Momento</h2></div>
+      <a href="#" class="view-all">Ver catálogo completo →</a>
+    </div>
+    <div class="pills">
+      <button class="pill active" onclick="setPill(this)">Óculos de Grau</button>
+      <button class="pill" onclick="setPill(this)">Óculos de Sol</button>
+      <button class="pill" onclick="setPill(this)">Infantil</button>
+      <button class="pill" onclick="setPill(this)">Lentes de Contato</button>
+      <button class="pill" onclick="setPill(this)">Multifocal</button>
+    </div>
+    <div class="pgrid">
+
+      <article class="pcard">
+        <div class="pthumb"><div class="pthumb-glow"></div><span class="pbadge b-hot">Mais Vendido</span><button class="pwish" aria-label="Favoritar">♡</button><span class="pemoji">🕶️</span></div>
+        <div class="pbody"><div class="pbrand">Ray-Ban</div><div class="pname">Armação Round Titanium Unissex RB8247V</div>
+          <div class="pcolors"><div class="cs" style="background:#1a1a1a" title="Preto"></div><div class="cs" style="background:#C8A84A" title="Dourado"></div><div class="cs" style="background:#8B4513" title="Tartaruga"></div></div>
+          <div class="pfoot"><div><span class="pold">R$ 980,00</span><div class="pprice">R$ 799<small>,00</small></div></div><button class="addbtn" onclick="addCart(this)" aria-label="Adicionar">+</button></div>
+        </div>
+      </article>
+
+      <article class="pcard">
+        <div class="pthumb"><div class="pthumb-glow"></div><span class="pbadge b-new">Novo</span><button class="pwish" aria-label="Favoritar">♡</button><span class="pemoji">👓</span></div>
+        <div class="pbody"><div class="pbrand">Prada</div><div class="pname">Armação Retangular Acetato Feminino PR 08ZV</div>
+          <div class="pcolors"><div class="cs" style="background:#1a1a1a" title="Preto"></div><div class="cs" style="background:#8B7355" title="Havana"></div></div>
+          <div class="pfoot"><div><div class="pprice">R$ 1.350<small>,00</small></div></div><button class="addbtn" onclick="addCart(this)" aria-label="Adicionar">+</button></div>
+        </div>
+      </article>
+
+      <article class="pcard">
+        <div class="pthumb"><div class="pthumb-glow"></div><span class="pbadge b-off">-35%</span><button class="pwish" aria-label="Favoritar">♡</button><span class="pemoji">🥽</span></div>
+        <div class="pbody"><div class="pbrand">Oakley</div><div class="pname">Armação Truebridge Masculino OX8130</div>
+          <div class="pcolors"><div class="cs" style="background:#4A4A4A" title="Gunmetal"></div><div class="cs" style="background:#1D3160" title="Navy"></div><div class="cs" style="background:#1a1a1a" title="Preto"></div></div>
+          <div class="pfoot"><div><span class="pold">R$ 780,00</span><div class="pprice">R$ 507<small>,00</small></div></div><button class="addbtn" onclick="addCart(this)" aria-label="Adicionar">+</button></div>
+        </div>
+      </article>
+
+      <article class="pcard">
+        <div class="pthumb"><div class="pthumb-glow"></div><span class="pbadge b-new">Premium</span><button class="pwish" aria-label="Favoritar">♡</button><span class="pemoji">🔬</span></div>
+        <div class="pbody"><div class="pbrand">Varilux</div><div class="pname">Lente Multifocal X Series — Adaptação Superior</div>
+          <div class="pcolors"><div class="cs" style="background:#E0E8F0;border:1px solid #aaa" title="Incolor"></div><div class="cs" style="background:#6B9AC4" title="Azul"></div></div>
+          <div class="pfoot"><div><div class="pprice">R$ 850<small>,00</small></div></div><button class="addbtn" onclick="addCart(this)" aria-label="Adicionar">+</button></div>
+        </div>
+      </article>
+
+      <article class="pcard">
+        <div class="pthumb"><div class="pthumb-glow"></div><span class="pbadge b-hot">Top</span><button class="pwish" aria-label="Favoritar">♡</button><span class="pemoji">😎</span></div>
+        <div class="pbody"><div class="pbrand">Vogue Eyewear</div><div class="pname">Armação Cat-Eye Acetato Feminino VO5353</div>
+          <div class="pcolors"><div class="cs" style="background:#E87CB0" title="Rosa"></div><div class="cs" style="background:#1a1a1a" title="Preto"></div><div class="cs" style="background:#C8A84A" title="Dourado"></div></div>
+          <div class="pfoot"><div><span class="pold">R$ 620,00</span><div class="pprice">R$ 490<small>,00</small></div></div><button class="addbtn" onclick="addCart(this)" aria-label="Adicionar">+</button></div>
+        </div>
+      </article>
+
+      <article class="pcard">
+        <div class="pthumb"><div class="pthumb-glow"></div><span class="pbadge b-new">Novo</span><button class="pwish" aria-label="Favoritar">♡</button><span class="pemoji">👁️</span></div>
+        <div class="pbody"><div class="pbrand">Acuvue Oasys</div><div class="pname">Lente de Contato HydraLuxe — Caixa 30un</div>
+          <div class="pfoot"><div><div class="pprice">R$ 198<small>,00</small></div></div><button class="addbtn" onclick="addCart(this)" aria-label="Adicionar">+</button></div>
+        </div>
+      </article>
+
+      <article class="pcard">
+        <div class="pthumb"><div class="pthumb-glow"></div><span class="pbadge b-off">-25%</span><button class="pwish" aria-label="Favoritar">♡</button><span class="pemoji">🕶️</span></div>
+        <div class="pbody"><div class="pbrand">Michael Kors</div><div class="pname">Armação Oval Rose Gold Feminino MK3060</div>
+          <div class="pcolors"><div class="cs" style="background:#B76E79" title="Rose Gold"></div><div class="cs" style="background:#C0C0C0" title="Prata"></div></div>
+          <div class="pfoot"><div><span class="pold">R$ 840,00</span><div class="pprice">R$ 630<small>,00</small></div></div><button class="addbtn" onclick="addCart(this)" aria-label="Adicionar">+</button></div>
+        </div>
+      </article>
+
+      <article class="pcard">
+        <div class="pthumb"><div class="pthumb-glow"></div><button class="pwish" aria-label="Favoritar">♡</button><span class="pemoji">✨</span></div>
+        <div class="pbody"><div class="pbrand">Transitions</div><div class="pname">Lente Signature Gen 8 Fotossensível + Anti-reflexo</div>
+          <div class="pcolors"><div class="cs" style="background:#4A4A8A" title="Violeta"></div><div class="cs" style="background:#6B8B6B" title="Verde"></div><div class="cs" style="background:#8B6B3A" title="Âmbar"></div></div>
+          <div class="pfoot"><div><div class="pprice">R$ 680<small>,00</small></div></div><button class="addbtn" onclick="addCart(this)" aria-label="Adicionar">+</button></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<div class="cd-wrap">
+  <div class="cd-inner">
+    <div>
+      <div class="tag" style="margin-bottom:12px">⏰ Tempo limitado</div>
+      <h2 class="sec-title">Ofertas <em>Imperdíveis</em></h2>
+      <p style="color:var(--gray3);font-size:15px;margin-top:8px">Corre que já está acabando!</p>
+      <div class="cd-timer" aria-live="polite">
+        <div class="cd-blk"><span class="cd-num" id="d">00</span><span class="cd-lbl">Dias</span></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-blk"><span class="cd-num" id="h">00</span><span class="cd-lbl">Hrs</span></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-blk"><span class="cd-num" id="m">00</span><span class="cd-lbl">Min</span></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-blk"><span class="cd-num" id="s">00</span><span class="cd-lbl">Seg</span></div>
+      </div>
+      <button class="btn-gold">Ver todas as ofertas →</button>
+    </div>
+    <div class="cd-offers">
+      <div class="cd-card"><span class="cd-em">🕶️</span><div><div class="cd-br">RAY-BAN</div><div class="cd-nm">Wayfarer RB2140</div><div class="cd-pr-old">R$ 950</div><div class="cd-pr">R$ 589 <span class="cd-pct">-38%</span></div></div></div>
+      <div class="cd-card"><span class="cd-em">👓</span><div><div class="cd-br">VARILUX</div><div class="cd-nm">Multifocal Comfort</div><div class="cd-pr-old">R$ 1.200</div><div class="cd-pr">R$ 780 <span class="cd-pct">-35%</span></div></div></div>
+      <div class="cd-card"><span class="cd-em">😎</span><div><div class="cd-br">OAKLEY</div><div class="cd-nm">Holbrook OX8156</div><div class="cd-pr-old">R$ 720</div><div class="cd-pr">R$ 449 <span class="cd-pct">-38%</span></div></div></div>
+      <div class="cd-card"><span class="cd-em">👁️</span><div><div class="cd-br">ACUVUE</div><div class="cd-nm">Oasys 1-Day 90un</div><div class="cd-pr-old">R$ 380</div><div class="cd-pr">R$ 249 <span class="cd-pct">-34%</span></div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- BRANDS -->
+<div class="brands">
+  <div class="brands-track" aria-hidden="true">
+    <span class="bname">Ray-Ban</span><span class="bdot">✦</span><span class="bname">Oakley</span><span class="bdot">✦</span>
+    <span class="bname">Prada</span><span class="bdot">✦</span><span class="bname">Varilux</span><span class="bdot">✦</span>
+    <span class="bname">Transitions</span><span class="bdot">✦</span><span class="bname">Acuvue</span><span class="bdot">✦</span>
+    <span class="bname">Michael Kors</span><span class="bdot">✦</span><span class="bname">Zeiss</span><span class="bdot">✦</span>
+    <span class="bname">Vogue</span><span class="bdot">✦</span><span class="bname">Kodak Lens</span><span class="bdot">✦</span>
+    <span class="bname">Emporio Armani</span><span class="bdot">✦</span><span class="bname">Dolce & Gabbana</span><span class="bdot">✦</span>
+    <!-- repeat -->
+    <span class="bname">Ray-Ban</span><span class="bdot">✦</span><span class="bname">Oakley</span><span class="bdot">✦</span>
+    <span class="bname">Prada</span><span class="bdot">✦</span><span class="bname">Varilux</span><span class="bdot">✦</span>
+    <span class="bname">Transitions</span><span class="bdot">✦</span><span class="bname">Acuvue</span><span class="bdot">✦</span>
+    <span class="bname">Michael Kors</span><span class="bdot">✦</span><span class="bname">Zeiss</span><span class="bdot">✦</span>
+    <span class="bname">Vogue</span><span class="bdot">✦</span><span class="bname">Kodak Lens</span><span class="bdot">✦</span>
+    <span class="bname">Emporio Armani</span><span class="bdot">✦</span><span class="bname">Dolce & Gabbana</span><span class="bdot">✦</span>
+  </div>
+</div>
+
+<!-- ═══════════ TIKTOK ═══════════ -->
+<section class="tiktok-sec">
+  <div class="tt-hd ctn">
+    <div class="tt-logo-row"><div class="tt-icon">🎵</div></div>
+    <h2 class="tt-title">Nos siga no <span class="tt-grad">TikTok</span></h2>
+    <p class="tt-sub">Dicas de estilo, guias de escolha e muito mais — todo dia, de graça!</p>
+    <a href="https://www.tiktok.com/@graau" target="_blank" rel="noopener" class="tt-handle">🎵 @graau.online &nbsp;·&nbsp; Seguir agora</a>
+  </div>
+
+  <div class="tt-grid ctn">
+
+    <div class="tt-card">
+      <div class="tt-bg"></div><div class="tt-shimmer"></div>
+      <span class="tt-center">👓</span>
+      <div class="tt-play">▶</div>
+      <span class="tt-feat">DESTAQUE</span>
+      <div class="tt-meta">
+        <div class="tt-cap">Qual óculos combina com rosto redondo? 🔵 LUNA explica tudo!</div>
+        <div class="tt-stats"><span class="tt-stat">❤️ 48.2k</span><span class="tt-stat">💬 312</span></div>
+      </div>
+    </div>
+
+    <div class="tt-card">
+      <div class="tt-bg"></div><div class="tt-shimmer"></div>
+      <span class="tt-center">🔬</span>
+      <div class="tt-play">▶</div>
+      <span class="tt-badge">VIRAL</span>
+      <div class="tt-meta">
+        <div class="tt-cap">Como medir sua DNP em casa em 3 minutos ⏱️</div>
+        <div class="tt-stats"><span class="tt-stat">❤️ 92.1k</span><span class="tt-stat">💬 874</span></div>
+      </div>
+    </div>
+
+    <div class="tt-card">
+      <div class="tt-bg"></div><div class="tt-shimmer"></div>
+      <span class="tt-center">😎</span>
+      <div class="tt-play">▶</div>
+      <div class="tt-meta">
+        <div class="tt-cap">Ray-Ban vs Oakley — qual vale mais a pena? ⚔️</div>
+        <div class="tt-stats"><span class="tt-stat">❤️ 31.5k</span><span class="tt-stat">💬 541</span></div>
+      </div>
+    </div>
+
+    <div class="tt-card">
+      <div class="tt-bg"></div><div class="tt-shimmer"></div>
+      <span class="tt-center">🫀</span>
+      <div class="tt-play">▶</div>
+      <div class="tt-meta">
+        <div class="tt-cap">Óculos para rosto coração 🫀 — as melhores armações!</div>
+        <div class="tt-stats"><span class="tt-stat">❤️ 27.8k</span><span class="tt-stat">💬 203</span></div>
+      </div>
+    </div>
+
+    <div class="tt-card">
+      <div class="tt-bg"></div><div class="tt-shimmer"></div>
+      <span class="tt-center">💜</span>
+      <div class="tt-play">▶</div>
+      <span class="tt-badge">NOVO</span>
+      <div class="tt-meta">
+        <div class="tt-cap">Conheça a LUNA — nossa IA que te ajuda a escolher o óculos perfeito 💜</div>
+        <div class="tt-stats"><span class="tt-stat">❤️ 15.3k</span><span class="tt-stat">💬 98</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Metrics -->
+  <div class="tt-metrics ctn">
+    <div class="tt-metric"><span class="val">+24k</span><span class="lbl">Seguidores</span></div>
+    <div class="tt-metric"><span class="val">3×</span><span class="lbl">Vídeos por semana</span></div>
+    <div class="tt-metric"><span class="val">200k+</span><span class="lbl">Visualizações</span></div>
+    <div class="tt-metric"><span class="val">92k</span><span class="lbl">Maior vídeo</span></div>
+    <div class="tt-metric"><span class="val">4.8%</span><span class="lbl">Taxa de engajamento</span></div>
+  </div>
+
+  <div class="tt-cta">
+    <a href="https://www.tiktok.com/@graau" target="_blank" rel="noopener" class="btn-tiktok">
+      <span>🎵</span> Seguir @graau no TikTok
+    </a>
+    <div class="tt-follow-info"><span>+24k</span> seguidores · <span>3</span> vídeos por semana</div>
+  </div>
+</section>
+
+<!-- LUNA -->
+<section class="luna-sec">
+  <div class="luna-inner">
+    <div class="luna-chat">
+      <div class="chat-top">
+        <div class="chat-av">💜</div>
+        <div class="chat-info">
+          <div class="nm">LUNA — Consultora GRAAU</div>
+          <div class="st"><span class="online-dot"></span> Online · Responde em segundos</div>
+        </div>
+        <span class="chat-menu">⋯</span>
+      </div>
+      <div class="chat-body">
+        <div class="msg-row">
+          <div class="mavt luna">💜</div>
+          <div><div class="bbl luna">Olá! 💜 Sou a LUNA, sua consultora da GRAAU. Como posso te ajudar hoje?</div><div class="msg-ts">agora</div></div>
+        </div>
+        <div class="msg-row user">
+          <div class="mavt user">👤</div>
+          <div><div class="bbl user">Quero óculos multifocal, por onde começo?</div><div class="msg-ts" style="text-align:right">agora</div></div>
+        </div>
+        <div class="msg-row">
+          <div class="mavt luna">💜</div>
+          <div><div class="bbl luna">Perfeito! Vou te guiar em tudo: receita, medição de DNP online e a lente ideal para o seu perfil. Você já tem a receita em mãos? 👓</div><div class="msg-ts">agora</div></div>
+        </div>
+        <div class="typing-row">
+          <div class="mavt luna">💜</div>
+          <div class="typing-bbl"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </div>
+    <div class="luna-txt">
+      <div class="tag" style="margin-bottom:12px">IA Especialista 24h</div>
+      <h2>Conheça a <em>LUNA</em>,<br>sua consultora sempre disponível</h2>
+      <p>A LUNA é a IA da GRAAU, treinada para te ajudar a escolher o óculos ideal para o seu rosto, grau e estilo — 24 horas por dia, 7 dias por semana, inclusive pelo TikTok e Instagram.</p>
+      <div class="luna-feats">
+        <div class="luna-feat"><div class="feat-ic">🔬</div>Orientação de medição DNP e distância pupilar online</div>
+        <div class="luna-feat"><div class="feat-ic">👓</div>Recomendação de armações por formato de rosto</div>
+        <div class="luna-feat"><div class="feat-ic">💡</div>Especialista em lentes multifocais e progressivas</div>
+        <div class="luna-feat"><div class="feat-ic">📦</div>Acompanhamento completo do pedido até a entrega</div>
+        <div class="luna-feat"><div class="feat-ic">🎵</div>Também disponível via TikTok e Instagram</div>
+      </div>
+      <a href="https://wa.me/SEUNUMERO <!-- ⚠️ TROCAR PELO NÚMERO DA LUNA -->" class="btn-luna" target="_blank" rel="noopener">💜 Falar com a LUNA agora</a>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<div class="nl-wrap">
+  <div class="nl-inner">
+    <div class="tag" style="justify-content:center;margin-bottom:12px">Fique por dentro</div>
+    <h2>Receba <em>ofertas exclusivas</em><br>antes de todo mundo</h2>
+    <p>Cadastre seu e-mail e ganhe 10% de desconto na primeira compra.</p>
+    <form class="nl-form" onsubmit="handleNL(event)">
+      <input type="email" placeholder="seu@email.com.br" required aria-label="E-mail">
+      <button type="submit" class="btn-gold">Quero →</button>
+    </form>
+    <div class="nl-tags">
+      <span class="nl-tag">Sem spam</span>
+      <span class="nl-tag">Cancele quando quiser</span>
+      <span class="nl-tag">10% OFF na 1ª compra</span>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="fb">
+      <span class="logo-txt">GR<span class="g">AA</span>U</span>
+      <p>A ótica online premium que combina tecnologia de IA, precisão óptica e estilo para você ver o mundo com mais clareza.</p>
+      <div class="socials">
+        <a href="#" class="soc" aria-label="Instagram">📷</a>
+        <a href="https://www.tiktok.com/@graau" class="soc" aria-label="TikTok" target="_blank">🎵</a>
+        <a href="#" class="soc" aria-label="Facebook">👍</a>
+        <a href="#" class="soc" aria-label="YouTube">▶️</a>
+        <a href="#" class="soc" aria-label="WhatsApp">💬</a>
+      </div>
+    </div>
+    <div class="fc">
+      <h4>Produtos</h4>
+      <ul>
+        <li><a href="#">Óculos de Grau</a></li>
+        <li><a href="#">Óculos de Sol</a></li>
+        <li><a href="#">Lente de Contato</a></li>
+        <li><a href="#">Armações Infantil</a></li>
+        <li><a href="#">Lentes Multifocais</a></li>
+        <li><a href="#">Outlet 🔥</a></li>
+      </ul>
+    </div>
+    <div class="fc">
+      <h4>Ajuda</h4>
+      <ul>
+        <li><a href="#">Como Funciona</a></li>
+        <li><a href="#">Medir DNP Online</a></li>
+        <li><a href="#">Tipos de Rosto</a></li>
+        <li><a href="#">Trocas e Devoluções</a></li>
+        <li><a href="#">Rastrear Pedido</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="fc">
+      <h4>Contato</h4>
+      <div class="fc-contact">
+        <div class="fc-item"><span class="ico">💬</span><a href="https://wa.me/SEUNUMERO <!-- ⚠️ TROCAR PELO NÚMERO DA LUNA -->" style="color:var(--teal)">(XX) X XXXX-XXXX</a></div>
+        <div class="fc-item"><span class="ico">✉️</span><a href="/cdn-cgi/l/email-protection#a6c9cfe6c1d4c7c7d388c5c9cb88c4d4"><span class="__cf_email__" data-cfemail="9af5f3dafde8fbfbefb4f9f5f7b4f8e8">[email&#160;protected]</span></a></div>
+        <div class="fc-item"><span class="ico">🎵</span><a href="https://www.tiktok.com/@graau" target="_blank">@graau no TikTok</a></div>
+        <div class="fc-item"><span class="ico">🕐</span><span>LUNA disponível 24h/7 dias</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bot">
+    <p>© 2025 GRAAU Ótica Online · graau.online — Todos os direitos reservados</p>
+    <div class="pay-methods" aria-label="Formas de pagamento">
+      <span class="pay-chip">PIX</span><span class="pay-chip">VISA</span>
+      <span class="pay-chip">MSTR</span><span class="pay-chip">ELO</span>
+      <span class="pay-chip">AMEX</span><span class="pay-chip">BOLETO</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<div class="wa-float">
+  <div class="wa-card" id="waCard">
+    <strong>💜 LUNA — Consultora GRAAU</strong>
+    <p>Sua IA especialista em óculos está online! Clique para conversar 👓</p>
+  </div>
+  <div class="wa-btn" onclick="toggleWA()" aria-label="Chat com LUNA">
+    <div class="wa-ring"></div>
+    <span>💬</span>
+    <span class="wa-dot">L</span>
+  </div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// ── Slider ─────────────────────────────
+let cur=0,tot=3,tmr;
+const slides=document.querySelectorAll('.slide');
+const dots=document.querySelectorAll('.s-dot');
+function goTo(n){
+  slides[cur].classList.remove('active');dots[cur].classList.remove('active');
+  cur=(n+tot)%tot;
+  slides[cur].classList.add('active');dots[cur].classList.add('active');
+  clearInterval(tmr);tmr=setInterval(()=>goTo(cur+1),5800);
+}
+document.getElementById('next').onclick=()=>goTo(cur+1);
+document.getElementById('prev').onclick=()=>goTo(cur-1);
+tmr=setInterval(()=>goTo(cur+1),5800);
+// Swipe
+let sx;
+document.querySelector('.hero').addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});
+document.querySelector('.hero').addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)goTo(cur+(dx<0?1:-1));},{passive:true});
+
+// ── Countdown ──────────────────────────
+const end=new Date();end.setDate(end.getDate()+2);end.setHours(23,59,59,0);
+const fmt=n=>String(n).padStart(2,'0');
+function tick(){const t=end-new Date();if(t<=0)return;document.getElementById('d').textContent=fmt(Math.floor(t/86400000));document.getElementById('h').textContent=fmt(Math.floor(t%86400000/3600000));document.getElementById('m').textContent=fmt(Math.floor(t%3600000/60000));document.getElementById('s').textContent=fmt(Math.floor(t%60000/1000));}
+tick();setInterval(tick,1000);
+
+// ── Header scroll ──────────────────────
+window.addEventListener('scroll',()=>document.getElementById('hdr').classList.toggle('scrolled',scrollY>40),{passive:true});
+
+// ── Pills ──────────────────────────────
+function setPill(el){document.querySelectorAll('.pill').forEach(p=>p.classList.remove('active'));el.classList.add('active');}
+
+// ── Cart ───────────────────────────────
+let cn=0;
+function addCart(btn){cn++;document.getElementById('cartN').textContent=cn;btn.textContent='✓';btn.style.cssText='background:var(--teal);border-color:var(--teal);color:#fff';setTimeout(()=>{btn.textContent='+';btn.style.cssText='';},1300);}
+
+// ── Wishlist ───────────────────────────
+document.querySelectorAll('.pwish').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();const on=b.textContent==='♥';b.textContent=on?'♡':'♥';b.style.color=on?'':'var(--red)';}));
+
+// ── Drawer ─────────────────────────────
+const drawer=document.getElementById('drawer');
+document.getElementById('burgerBtn').addEventListener('click',()=>{drawer.classList.add('open');document.body.style.overflow='hidden';});
+function closeDrw(){drawer.classList.remove('open');document.body.style.overflow='';}
+document.getElementById('drwClose').addEventListener('click',closeDrw);
+document.getElementById('drwBd').addEventListener('click',closeDrw);
+function toggleSub(el){const s=el.querySelector('.drw-sub');if(s)s.classList.toggle('open');}
+
+// ── WA Float ───────────────────────────
+let waOpen=false;const waCard=document.getElementById('waCard');
+setTimeout(()=>{waCard.classList.add('show');waOpen=true;},4000);
+function toggleWA(){waOpen=!waOpen;waCard.classList.toggle('show',waOpen);}
+
+// ── Newsletter ─────────────────────────
+function handleNL(e){e.preventDefault();const btn=e.target.querySelector('button');btn.textContent='✓ Cadastrado!';btn.style.background='var(--teal)';btn.disabled=true;}
+
+// ── Scroll reveal ──────────────────────
+const obs=new IntersectionObserver(entries=>entries.forEach(en=>{if(en.isIntersecting){en.target.style.opacity='1';en.target.style.transform='translateY(0)';}},{threshold:.08}));
+document.querySelec
